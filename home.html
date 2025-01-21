@@ -8,29 +8,20 @@
     <link rel="icon" type="image/png" href="pics/company_Logo-removebg-preview.png ">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="logo">
-            <img src="pics/company_Logo-removebg-preview.png" alt="Bridgepoint Recruitment Logo">
-        </div>
-        <nav>
-            <ul>
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">
-                       <img src="svg icons/bars-solid.svg" alt="">
-                    </a>
-                    <ul class="dropdown-content">
-                        <li><a href="header.html">Home</a></li>
-                        <li><a href="home.html">Services</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
+    <script>
+        async function includeHTML(file, elementId) {
+          const response = await fetch(file);
+          if (response.ok) {
+            const content = await response.text();
+            document.getElementById(elementId).innerHTML = content;
+          }
+        }
+      </script>
+    </head>
+    <body onload="includeHTML('header.html', 'header'); includeHTML('footer.html', 'footer');">
+      <div id="header"></div>
+      <main>
+       <!-- Hero Section -->
     <section class="hero">
         <video class=" hero video" autoplay muted loop>
             <source src="pics/Untitled video - Made with Clipchamp.mp4" type="video/mp4">
@@ -72,12 +63,8 @@
         <p>&copy; 2025 Bridgepoint Recruitment. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript for Dropdown -->
-    <script>
-        document.querySelector('.dropbtn').addEventListener('click', function() {
-            var dropdownContent = document.querySelector('.dropdown-content');
-            dropdownContent.classList.toggle('show');
-        });
-    </script>
+  
+
+      </main>
 </body>
 </html>
