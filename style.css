@@ -82,11 +82,7 @@ header nav ul li a:hover {
     padding: 10px;
     
 }
-@media (max-width: 768px) {
- 
-        right: 10px; /* Ensure padding from the screen's edge */
-        left: auto; /* Prevent default left alignment */
-}
+
 .dropdown-content {
     display: none; /* Hidden by default */
     position: absolute;
