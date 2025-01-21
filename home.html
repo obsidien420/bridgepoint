@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridgepoint Recruitment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="pics/company_Logo-removebg-preview.png ">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="pics/company_Logo-removebg-preview.png" alt="Bridgepoint Recruitment Logo">
+        </div>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">
+                       <img src="svg icons/bars-solid.svg" alt="">
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="header.html">Home</a></li>
+                        <li><a href="home.html">Services</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video class=" hero video" autoplay muted loop>
+            <source src="pics/Untitled video - Made with Clipchamp.mp4" type="video/mp4">
+        </video>
+        <div class="herocontent">
+        <h1>Welcome to Bridgepoint Recruitment</h1>
+        <p>Connecting talent with opportunities</p>
+   
+    </section>
+
+    <!-- Latest Jobs Section -->
+    <section class="latest-jobs">
+        <h2>Find Your Dream Job</h2>
+        <div class="job-listings">
+            <!-- Repeat this block for each job listing -->
+            <div class="job">
+                <h3>Software Developer</h3>
+                <p>Location: Remote</p>
+                <p>Salary: $60,000 - $80,000/year</p>
+                <a href="#" class="job-link">View Details</a>
+            </div>
+            <div class="job">
+                <h3>Project Manager</h3>
+                <p>Location: New York, NY</p>
+                <p>Salary: $80,000 - $100,000/year</p>
+                <a href="#" class="job-link">View Details</a>
+            </div>
+            <div class="job">
+                <h3>UX Designer</h3>
+                <p>Location: San Francisco, CA</p>
+                <p>Salary: $70,000 - $90,000/year</p>
+                <a href="#" class="job-link">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Bridgepoint Recruitment. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Dropdown -->
+    <script>
+        document.querySelector('.dropbtn').addEventListener('click', function() {
+            var dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
