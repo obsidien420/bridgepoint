@@ -9,8 +9,10 @@ body, h1, h2, h3, p, ul {
     list-style: none;
    
 }
-
-body {
+body,html{
+    overflow-x: hidden;
+}
+body{
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: black;
@@ -84,18 +86,20 @@ header nav ul li a:hover {
 .dropdown-content {
     display: none; /* Hidden by default */
     position: absolute;
-    background-color:rgba(255, 255, 255, 0);
+    right: 0; /* Align to the right edge */
+    background-color: rgba(255, 255, 255, 0); /* Adjust opacity for better visibility */
     min-width: 160px;
     z-index: 1;
     top: 100%; /* Position it below the button */
-   
+
+    border-radius: 5px; /* Optional for better aesthetics */
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
     color: white;
     padding: 12px 16px;
-    text-decoration: none;
+    text-decoration:underline;
     display: block;
 }
 
