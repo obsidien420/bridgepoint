@@ -55,7 +55,7 @@ header nav ul {
 }
 
 header nav ul li a {
-    color: white;
+    color: black ;
     text-decoration: dashed;
     font-weight: bold;
     font-size: 16px;
