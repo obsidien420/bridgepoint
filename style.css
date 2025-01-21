@@ -75,7 +75,7 @@ header nav ul li a:hover {
 /* Dropdown button styling */
 .dropbtn {
     background-color:transparent;
-    color: white;
+    color: black;
     border: none;
     font-size: 16px;
     cursor: pointer;
