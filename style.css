@@ -87,7 +87,7 @@ header nav ul li a:hover {
     display: none; /* Hidden by default */
     position: absolute;
     right: 0; /* Align to the right edge */
-    background-color: rgba(255, 255, 255, 0); /* Adjust opacity for better visibility */
+    background-color: rgba(19, 1, 1, 0.671); /* Adjust opacity for better visibility */
     min-width: 160px;
     z-index: 1;
     top: 100%; /* Position it below the button */
@@ -95,6 +95,7 @@ header nav ul li a:hover {
     overflow-y: auto;
    
 }
+
 
 /* Links inside the dropdown */
 .dropdown-content a {
@@ -107,7 +108,7 @@ header nav ul li a:hover {
 
 /* Hover effect for dropdown links */
 .dropdown-content a:hover {
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255,0);
 }
 
 /* Show the dropdown when hovering */
@@ -147,15 +148,6 @@ header nav ul li a:hover {
 
 .herocontent p {
     font-size: 25px;
-}
-@media (max-width:769px) {
-    .herocontent h1{
-        font-size: 12px;
-    }
-    .herocontent p{
-        font-size: 10px;
-    }
-    
 }
 
 /* Latest Jobs Section styling */
