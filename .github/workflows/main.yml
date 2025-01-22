@@ -1,0 +1,40 @@
+name: Auto Commit, Push, and Pull
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Allows manual triggering of the workflow
+
+jobs:
+  auto_commit_push_pull:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          # Set up a token to use for pushing (necessary for GitHub to perform push operations)
+          token: ${{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}}
+
+      # Step 2: Set up Git configuration
+      - name: Set up Git configuration
+        run: |
+          git config user.name "obsidien420"
+          git config user.email "callumdewar44@gmail.com"
+
+      # Step 3: Pull the latest changes from the remote repository
+      - name: Pull latest changes
+        run: git pull origin main
+
+      # Step 4: Add and commit any changes (if there are any)
+      - name: Commit and push changes
+        run: |
+          git add .
+          git diff --cached --quiet || git commit -m "Auto commit by GitHub Actions"
+          git push origin main
+
+      # Step 5: Debugging: Check the status to ensure everything is in order
+      - name: Show git status
+        run: git status
