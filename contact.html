@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Bridgepoint</title>
+    <link rel="stylesheet" href="style.css">
+    <div id="header"></div>
+</head>
+<body>
+    <div class="contact-container">
+        <h1>We’d love to hear from you</h1>
+        <p>London, UK</p>
+        <p>Phone: <a href="tel:0791866234">079 186 6234</a></p>
+        <p>Email: <a href="malcolm@bridgepointrecruitment.co.uk">malcolm@bridgepointrecruitment.co.uk</a></p>
+        <form action="submit_form.php" method="post" enctype="multipart/form-data">
+            <label for="name">Your Name*</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address*</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number*</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="message">Your Message*</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <label for="document">Upload a Document</label>
+            <input type="file" id="document" name="document">
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+</body>
+<script>
+    async function loadComponent(component, selector) {
+        const response = await fetch(component);
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+    }
+
+    // Load header and footer
+    loadComponent('header.html', '#header');
+    loadComponent('footer.html', '#footer');
+</script>
+<div id="footer"></div>
+</html>
