@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           # Set up a token to use for pushing (necessary for GitHub to perform push operations)
-          token: ${{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}}
+          token: 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
 
       # Step 2: Set up Git configuration
       - name: Set up Git configuration
