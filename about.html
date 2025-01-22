@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>Bridgepoint Recruitment</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="pics/company_Logo-removebg-preview.png ">
+    <div id="header"></div>
 </head>
+
 <body>
-    <div class="container">
+   
         <!-- Introduction Section -->
         <div class="section intro">
-            <h2>About Us</h2>
-            <p>At Ernest & Florent, we sweat the small stuff.</p>
+            <section class="hero">
+                <video class="hero video" autoplay muted loop>
+                    <source src="pics/Untitled video - Made with Clipchamp.mp4" type="video/mp4">
+                </video>
+                <div class="herocontent">
+                    <h1>At Bridgepoint we strive for excellence.</h1>
+                </div>
+            </section>
         </div>
 
         <!-- Core Values Section -->
@@ -38,22 +47,29 @@
             <h3>Meet the Team</h3>
             <div class="team-grid">
                 <div class="team-member">
-                    <img src="https://via.placeholder.com/150" alt="Team Member">
+                    <img src="pics/IMG-20240121-WA0007.jpg" alt="Team Member">
                     <h4>John Doe</h4>
                     <p>Founder & CEO</p>
                 </div>
                 <div class="team-member">
-                    <img src="https://via.placeholder.com/150" alt="Team Member">
-                    <h4>Jane Smith</h4>
+                    <img src="pics/IMG-20240121-WA0007.jpg" alt="Team Member">
+                    <h4>Malcolm Dewar</h4>
                     <p>Head of Marketing</p>
-                </div>
-                <div class="team-member">
-                    <img src="https://via.placeholder.com/150" alt="Team Member">
-                    <h4>Bob Brown</h4>
-                    <p>Lead Designer</p>
                 </div>
             </div>
         </div>
-    </div>
+    
 </body>
+<script>
+    async function loadComponent(component, selector) {
+        const response = await fetch(component);
+        const html = await response.text();
+        document.querySelector(selector).innerHTML = html;
+    }
+
+    // Load header and footer
+    loadComponent('header.html', '#header');
+    loadComponent('footer.html', '#footer');
+</script>
+<div id="footer"></div>
 </html>
